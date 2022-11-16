@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: $PATH
+    - run: echo $PATH
     - name: configure
       run: ./configure --prefix=$HOME
     - name: make
