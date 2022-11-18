@@ -1,4 +1,4 @@
-C++, CppUnit, googletest and Make
+C++, CppUnit, googletest, and Make
 =================================
 
 Prerequisites
@@ -11,7 +11,7 @@ To check if `c++` is installed already:
 ```
 
 $ c++ -v
-gcc version 4.4.7 20120313 (Red Hat 4.4.7-3) (GCC) 
+gcc version 4.4.7 20120313 (Red Hat 4.4.7-3) (GCC)
 ```
 
 **CppUnit test framework**:
@@ -24,7 +24,7 @@ $ tar -xvzf cppunit-1.13.2.tar.gz
 $ cd cppunit-1.13.2
 $ ./configure --prefix=$HOME
 $ make
-$ make install 
+$ make install
 $ ls $HOME/include/cppunit
 AdditionalMessage.h          Protector.h           TestResultCollector.h
 Asserter.h                   SourceLine.h          TestResult.h
@@ -55,7 +55,7 @@ To download, build and install see [googletest](https://github.com/google/google
 
 ```
 $ wget https://github.com/google/googletest/archive/release-1.7.0.zip
-$ unzip release-1.7.0.zip 
+$ unzip release-1.7.0.zip
 $ cd googletest-release-1.7.0/
 $ mkdir build
 $ cd build
@@ -97,14 +97,14 @@ Compile and run CppUnit tests and view XML test report:
 
 ```
 $ make test
-$ cat TestResults.xml 
+$ cat TestResults.xml
 ```
 
 Compile and run googletest tests and view XML xUnit-style test report:
 
 ```
 $ make googletest
-$ cat TestResults.xml 
+$ cat TestResults.xml
 ```
 
 Clean up:
