@@ -12,22 +12,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses : actions/checkout@v2 
+    
     - name: make fibonacci
-      run: make fibonacci 
+    - run: make fibonacci 
       
     - name: fibonacci30
-      run: ./fibonacci 30
+    - run: ./fibonacci 30
       
     - name: make test
-      run: make test
+    - run: make test
       
     - name: TestResults
-      run: cat TestResults.xml 
+    - run: cat TestResults.xml 
       
     - name: make googletest
-      run: make googletest
+    - run: make googletest
       
     - name: make clean
-      run: make clean
+    - run: make clean
       
 
