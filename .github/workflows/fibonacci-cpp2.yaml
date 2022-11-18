@@ -1,0 +1,27 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: make fibonacci
+      run: make fibonacci 
+
+    - name: fibonacci30
+      run: ./fibonacci 30
+
+    - name: make test
+      run: make test
+
+    - name: TestResults
+      run: cat TestResults.xml 
