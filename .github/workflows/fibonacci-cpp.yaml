@@ -14,22 +14,8 @@ jobs:
     steps:
     - uses : actions/checkout@v2 
     
-    - name: make fibonacci
-    - run: make fibonacci 
-      
-    - name: fibonacci30
-    - run: ./fibonacci 30
-      
-    - name: make test
-    - run: make test
-      
-    - name: TestResults
-    - run: cat TestResults.xml 
-      
-    - name: make googletest
-    - run: make googletest
-      
-    - name: make clean
-    - run: make clean
-      
-
+    - run : pip install pytest
+    
+    - run : python python/maths/fibonacci.py 30
+    
+    - run : pytest python/maths/tests/test_fibonacci.py 
